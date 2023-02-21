@@ -2,7 +2,7 @@ Import-Module posh-git
 oh-my-posh init pwsh --config "~/Documents/PowerShell/theme.omp.json" | Invoke-Expression
 
 function repos {
-	& cd C:\Repos
+	& cd ~/source/repos
 }
 
 function edit {
@@ -21,11 +21,6 @@ function which {
 	if ($PSBoundParameters.ContainsKey('Command')) {
 		Write-Host (Get-Module (Get-Command $Command).Source).Path
 	}
-}
-
-function core {
-	& cd C:\Repos\LeadCrumb\DC.Atlas\Core.Api
-	& dotnet run
 }
 
 clear
